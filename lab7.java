@@ -91,11 +91,11 @@ class EMailTransmitter implements Transmitter {
     }
 }
 
-class lab7 implements Transmitter {
+class MailTransmitter implements Transmitter {
     private List<Message> buffer;
     private int bufferSize;
 
-    public lab7(int bufferSize) {
+    public MailTransmitter(int bufferSize) {
         this.bufferSize = bufferSize;
         this.buffer = new ArrayList<>();
     }
@@ -129,7 +129,7 @@ class E2 {
         Person p4 = new Person("Gabriel");
 
         Transmitter email = new EMailTransmitter();
-        Transmitter mail = new lab7(2);
+        Transmitter mail = new MailTransmitter(2);
 
         p1.setTransmitter(email);
         p1.send(p2, "Scrie-i Ioanei să-mi dea adresa ei de e-mail!");
